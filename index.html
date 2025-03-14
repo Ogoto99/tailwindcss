@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .card:hover .content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen text-grey-900">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-gray-900 text-white flex justify-between items-center px-8 py-4 z-50">
+        <div class="text-xl font-bold">MyBrand</div>
+        <ul class="hidden md:flex space-x-6">
+            <li><a href="#hero" class="cursor-pointer hover:text-white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-red-500 after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">Home</a></li>
+            <li><a href="#about" class="hover:text-white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-red-500 after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">About</a></li>
+            <li><a href="#services" class="hover:text-white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-red-500 after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">Services</a></li>
+            <li><a href="#contact" class="hover:text-white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-red-500 after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">Contact</a></li>
+        </ul>
+        <div class="md.hidden text-2xl cursor-pointer">&#9776;</div>
+    </nav>
+    <!-- Hero Section -->
+    <header id="hero" class="h-screen bg-cover bg-center flex items-center justify-center text-white text-center" style="background-image: url('assets/Drawing Thomas Shelby.jpg');">
+        <div class="bg-black bg-opacity-50 p-8 rounded-lg">
+            <h1 class="text-4xl font-bold">Welcome to My Website</h1>
+            <p class="text-lg">We are a digital agency that specializes in web development, graphic design, and digital marketing.</p>
+            <a href="#contact" class="inline-block mt-4 bg-red-500 text-white px-6 py-2">Contact Us</a>
+        </div>
+    </header>
+    <!-- Main Section -->
+    <main>
+        <section id="about" class="p-8">
+            <h2 class="text-2xl font-bold">About Us</h2>
+            <p>We specialize in web development, graphic design, and digital marketing.</p>
+        </section>
+        <section id="services" class="p-8">
+            <h2 class="text-2xl font-bold">Our Services</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="card relative bg-white shadow-lg rounded-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold">Web Development</h3>
+                    </div>
+                    <div class="content absolute inset-0 bg-black bg-opacity-75 text-white opacity-0 flex items-center justify-center transition-opacity duration-300 transform translate-y-full">
+                        <p>We build responsive and user-friendly websites that are tailored to your needs.</p>
+                    </div>
+                </div>
+                <div class="card relative bg-white shadow-lg rounded-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold">Graphic Design</h3>
+                    </div>
+                    <div class="content absolute inset-0 bg-black bg-opacity-75 text-white opacity-0 flex items-center justify-center transition-opacity duration-300 transform translate-y-full">
+                        <p>We create beautiful and modern designs for your website, app, and print needs.</p>
+                    </div>
+                </div>
+                <div class="card relative bg-white shadow-lg rounded-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold">Digital Marketing</h3>
+                    </div>
+                    <div class="content absolute inset-0 bg-black bg-opacity-75 text-white opacity-0 flex items-center justify-center transition-opacity duration-300 transform translate-y-full">
+                        <p>We help you market and promote your products and services online.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
